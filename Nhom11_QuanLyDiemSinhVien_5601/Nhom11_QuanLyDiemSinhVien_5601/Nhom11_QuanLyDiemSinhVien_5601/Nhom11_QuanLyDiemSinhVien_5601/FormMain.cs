@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Nhom11_QuanLyDiemSinhVien_5601
+{
+    public partial class FormMain : Form
+    {
+        public FormMain()
+        {
+            InitializeComponent();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result;
+            result = MessageBox.Show(" Bạn có chắc chắc muốn đăng xuất?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                FormDangNhap f = new FormDangNhap();
+                f.ShowDialog();
+            }
+        }
+
+        private void sinhViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSinhVien f = new FormSinhVien();
+            f.ShowDialog();
+        }
+
+        private void giảngViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGiangVien f = new FormGiangVien();
+            f.ShowDialog();
+        }
+
+        private void khoaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormKhoa f = new FormKhoa();
+            f.ShowDialog();
+        }
+
+        private void mônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMonHoc f = new FormMonHoc();
+            f.ShowDialog();
+        }
+
+        private void lớpMônHọcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLopMonHoc f = new FormLopMonHoc();
+            f.ShowDialog();
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bảngĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBangDiem f = new FormBangDiem();
+            f.ShowDialog();
+        }
+    }
+}
